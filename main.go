@@ -12,7 +12,7 @@ func main() {
 
 	e.GET("/status", handlers.Status)
 	e.GET("/GetUser/:id", handlers.GetUser)
-	e.GET("/GetPassword", handlers.GetPassword)
+	e.GET("/GetPassword/:id", handlers.GetPassword)
 	e.POST("/InsertUser", handlers.InsertUser)
 	e.Logger.Fatal(e.Start(":8080"))
 }

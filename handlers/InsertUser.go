@@ -12,7 +12,7 @@ import (
 func InsertUser(c echo.Context) error {
 
 	userInsert := &user{}
-	stmt, err := database.DbClient.Prepare("INSERT INTO USERS VALUES (?, ?, ?, ?, ?)")
+	stmt, err := database.DbClient.Prepare("INSERT INTO USERS VALUES (?, ?, ?, ?, ?)") // id pseudo email pwd_id
 	if err != nil {
 		log.Fatal("Cannot prepare DB statement", err)
 	}
